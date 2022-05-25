@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form edit(Ui)</title>
+    <style type="text/css">
+  
+    html:root{
+        background-color: cadetblue;
+      
+    }
+    body{
+       
+        background-color: cornflowerblue;
+        border: 2px solid black;
+    }
+    form{
+        width: 200px;
+        background-color:lightskyblue;
+        border-radius: 13px;
+        padding: 30px;
+      
+    input:enabled{
+        background-color: lightslategrey;
+    }
+    input:checked{
+        background-color: limegreen;
+    }
+    input:required{
+         color:blue;
+        
+     }
+    input:optional{
+        background-color: yellow;
+        color:blue;
+    }
+    </style>
+</head>
+<body>
+    <form >
+        First name:<br>
+        <input type="text" name="first name" autofocus><br><br>
+        last name:<br>
+        <input type="text" name="last name"><br><br>
+        E-mail:<br>
+        <input type="email" name="Email"><br><br>
+        Password:<br>
+        <input type="password" name="user pass" required><br><br>
+        Gender:<br>
+        Male<input type="radio" name="gender" checked> 
+        Female<input type="radio" name="gender"> <br><br>
+        <input type="submit" value="Sumbit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>

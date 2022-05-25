@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .head {
+            position: absolute;
+            left: 40%;
+            border: 2px solid red;
+        }
+        
+        .content {
+            height: 500px;
+            width: 700px;
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            border: 2px solid red;
+            /* text-align: center; */
+            /* display: block; */
+            /* position: relative; */
+        }
+        
+        p::first-letter {
+            font-size: 18pt;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: brown;
+        }
+        
+        p::first-line {
+            text-transform: uppercase;
+        }
+        
+        p::selection {
+            background-color: chartreuse;
+            /* <!--if u select text in browser it will folloe this styles--> 
+            double colon hole pseudo element 
+            single colon hole pseudo class
+            */
+        }
+        
+        .head::after {
+            content: "";
+            height: 15px;
+            width: 100%;
+            background-color: brown;
+            display: inline-block;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <h1>The Heading</h1>
+        </div>
+        <div class="content">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore, dicta asperiores, neque molestiae qui modi facilis repellat quae iste, itaque cum repudiandae debitis alias obcaecati aut! Maiores, et delectus?Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Vitae, consequatur?</p>
+            <p>Phtpsum dolor sit amet consectetur adipisicing elit. Ut tempore, dicta asperiores, neque molestiae qui modi facilis repellat quae iste, itaque cum repudiandae debitis alias obcaecati aut! Maiores, et delectus?Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Vitae, consequatur?</p>
+            <p>Dorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore, dicta asperiores, neque molestiae qui modi facilis repellat quae iste, itaque cum repudiandae debitis alias obcaecati aut! Maiores, et delectus?Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Vitae, consequatur?</p>
+            <p class="1stline">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+    </div>
+</body>
+
+</html>
